@@ -1,0 +1,64 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "img": "https://mppl.org/wp-content/uploads/0-214x300.jpg"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "img": "http://flavorwire.files.wordpress.com/2011/06/500_1984comparison.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "To Kill A Mockingbird",
+      "author": "Harper Lee",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/To_Kill_a_Mockingbird.JPG/220px-To_Kill_a_Mockingbird.JPG"
+    },
+    {
+      "id": 4,
+      "title": "Long Walk to Freedom",
+      "author": "Nelson Mandela",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51DVbVOCedL._SX318_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "48 Laws of Power",
+      "author": "Robert Green",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/71aG%2BxDKSYL.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Homegoing",
+      "author": "Yaa Gyasi",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41UY3xTBq3L._SX322_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 7,
+      "title": "The Jungle",
+      "author": "Upton Sinclair",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51i13OyQ1EL._SX346_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 8,
+      "title": "We Should All Be Feminists",
+      "author": "Chimamanda Ngozi Adichie",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51L9u20bC7L._SX348_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "img": "https://images.gr-assets.com/books/1442726934l/4865.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The Obstacle is the Way",
+      "author": "Ryan Holiday",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41d%2Baa6UYCL._SX352_BO1,204,203,200_.jpg"
+    }
+  ]
+}
