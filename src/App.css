@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+img {
+  width: 20%;
+  height: 20%;
+}
+.book-container {
+  display: flex;
+}
+.book-list {
+  width: 50%;
+}
+.bookshelf {
+  width: 50%;
+}
