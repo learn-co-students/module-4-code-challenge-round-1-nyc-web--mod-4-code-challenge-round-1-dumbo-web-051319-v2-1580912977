@@ -22,9 +22,10 @@ Here is some convenient sample info for you to use to add new books to the
 Book List with your form.
 
 * "How to Win Friends and Influence People", by Dale Carnegie
-* Sample Image URL: https://images.gr-assets.com/books/1442726934l/4865.jpg
+* Sample Image URL: `https://images.gr-assets.com/books/1442726934l/4865.jpg`
+
 
 * "The Obstacle is the Way" by Ryan Holiday
-* Sample Image URL: https://images-na.ssl-images-amazon.com/images/I/41d%2Baa6UYCL._SX352_BO1,204,203,200_.jpg
+* Sample Image URL: `https://images-na.ssl-images-amazon.com/images/I/41d%2Baa6UYCL._SX352_BO1,204,203,200_.jpg`
 
 ![bookshelf gif](bookshelfadd.gif)
