@@ -14,7 +14,7 @@ Then start the json-server:
 2. Render a list of books that show the book title and book img
 3. Clicking on a book in the Book List should add it to the Book Shelf
 4. Clicking on a book in the Book Shelf should remove it from the Book Shelf
-5. Add a form that allows the user to add a book to the Book List (this should _NOT_ persist)
+5. Add a controlled form that allows the user to add a book to the Book List (this should _NOT_ persist)
 6. BONUS: Each book can only be added to Book Shelf one time (Book Shelf should not have duplicate books)
 
 ![bookshelf gif](BookShelf.gif)
