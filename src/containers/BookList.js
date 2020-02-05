@@ -7,8 +7,8 @@ class BookList extends Component {
     return (
       <div className="book-list">
         <h1>Book List</h1>
-        <Form />
-        <ul>{/*render list of books here*/}</ul>
+        <Form submitHandler={this.props.submitHandler} title={this.props.title} author={this.props.author} img={this.props.img} changeHandler={this.props.changeHandler}/>
+      <ul>{this.props.books.map(book => (<Book key={book.id} book={book} action={this.props.addBookToShelf}/>))}</ul>
       </div>
     );
   }

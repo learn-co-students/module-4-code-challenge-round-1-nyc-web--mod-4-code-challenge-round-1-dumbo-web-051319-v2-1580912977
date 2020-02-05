@@ -2,9 +2,9 @@ import React from "react";
 
 const Book = props => {
   return (
-    <div>
-      <h2>{/*book title*/}</h2>
-      {/*book img*/}
+    <div onClick={() => props.action(props.book)}>
+      <h2>{props.book.title}</h2>
+      <img alt='book cover' src={props.book.img}/>
     </div>
   );
 };
