@@ -7,7 +7,7 @@ const Bookshelf = props => {
       action={props.removeFromShelf}
       key={book.id}
       {...book} />)
-  console.log("books", books)
+
   return (
     <div>
       <h1>Book Shelf</h1>

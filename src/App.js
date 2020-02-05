@@ -53,6 +53,8 @@ class App extends Component {
       body: JSON.stringify(book)
     }
 
+    // post fetch and update state with results
+    // no error handling
     fetch(url, configObj)
     .then(resp => resp.json())
     .then(book => {

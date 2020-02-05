@@ -32,9 +32,8 @@ class Form extends React.Component {
             <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.title} type="text" name="title" placeholder="Title" />
             <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.author} type="text" name="author" placeholder="Author" />
             <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.img} type="text" name="img" placeholder="Image URL" />
-          
-       </div>
-            <button className="btn btn-sm btn-outline-success" onClick={this.submitHandler} type="submit" >Add to List</button>
+          </div>
+          <button className="btn btn-sm btn-outline-success" onClick={this.submitHandler} type="submit" >Add to List</button>
         </form>
         <hr />
       </div>

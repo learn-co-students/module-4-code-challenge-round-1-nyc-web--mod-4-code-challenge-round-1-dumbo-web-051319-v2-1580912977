@@ -9,7 +9,7 @@ class BookList extends Component {
         action={this.props.addToShelf}
         key={book.id} 
         {...book} /> )
-    console.log("books", books)
+    
     return (
       <div className="book-list">
         <h1>Book List</h1>
