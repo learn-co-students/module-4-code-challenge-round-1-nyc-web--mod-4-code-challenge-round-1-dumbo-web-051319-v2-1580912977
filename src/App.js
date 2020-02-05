@@ -12,14 +12,19 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // fetch books from json db once app component mounts
     fetch("http://localhost:3005/books")
     .then(resp => resp.json())
     .then(bookData => this.setState({books: bookData}))
   }
 
   addToBookShelf = (e) => {
-    let bookTitle = e.target.name
-    let selectedBook = this.state.books.find(book => book.title === bookTitle)
+    // grab bookId from the "name" on image
+    // from the array of book data, find the book whose id matches bookId
+    // only if the book is not already in the book shelf, add the book object to the
+    // book shelf array and set state to include the updated book shelf array
+    let bookId = e.target.name
+    let selectedBook = this.state.books.find(book => book.id === parseInt(bookId))
 
     if(!this.state.bookShelf.includes(selectedBook)) {
       let bookShelfCopy = [...this.state.bookShelf, selectedBook]
@@ -28,13 +33,22 @@ class App extends Component {
   }
 
   removeFromBookShelf = (e) => {
-    let bookTitle = e.target.name
+    // grab bookId from the "name" on image
+    // make copy of book shelf array
+    // filter through the copy and select only the books whose ids do not match bookId
+    // set state to the book shelf array that does not include selected book
+    let bookId = e.target.name
     let reducedBookShelfArr = [...this.state.bookShelf]
-    reducedBookShelfArr = reducedBookShelfArr.filter(book => book.title !== bookTitle)
+    reducedBookShelfArr = reducedBookShelfArr.filter(book => book.id !== parseInt(bookId))
     this.setState({bookShelf: reducedBookShelfArr})
   }
 
   addNewBook = (newBookObj) => {
+    // POST fetch request to add new book to json db
+    // then make copy of books array
+    // add the returned new book obj (with an id) to the books array
+    // set state to books array that includes new book 
+    // pessimistic rendering of new book
     fetch("http://localhost:3005/books", {
       method: "POST",
       headers: {
@@ -52,6 +66,8 @@ class App extends Component {
   }
 
   render() {
+    // render book list and book shelf
+    // pass required functions and data as props
     return (
       <div className="book-container">
         <BookList books={this.state.books} addToBookShelf={this.addToBookShelf} addNewBook={this.addNewBook} />
