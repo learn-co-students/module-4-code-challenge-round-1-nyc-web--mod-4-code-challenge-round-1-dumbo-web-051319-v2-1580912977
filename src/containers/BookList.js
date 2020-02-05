@@ -4,11 +4,17 @@ import Form from "../components/Form";
 
 class BookList extends Component {
   render() {
+    let books = this.props.list.map( book => 
+      <Book 
+        action={this.props.addToShelf}
+        key={book.id} 
+        {...book} /> )
+    console.log("books", books)
     return (
       <div className="book-list">
         <h1>Book List</h1>
-        <Form />
-        <ul>{/*render list of books here*/}</ul>
+        <Form createBook={this.props.createBook} />
+        <ul>{books}</ul>
       </div>
     );
   }
