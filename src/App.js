@@ -35,9 +35,20 @@ class App extends Component {
   }
 
   addNewBook = (newBookObj) => {
-    let updatedBooksArr = [...this.state.books]
-    updatedBooksArr = [newBookObj, ...this.state.books]
-    this.setState({books: updatedBooksArr})
+    fetch("http://localhost:3005/books", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(newBookObj)
+    })
+    .then(resp => resp.json())
+    .then(newBook => {
+      let updatedBooksArr = [...this.state.books]
+      updatedBooksArr = [newBook, ...this.state.books]
+      this.setState({books: updatedBooksArr})
+    })
   }
 
   render() {
