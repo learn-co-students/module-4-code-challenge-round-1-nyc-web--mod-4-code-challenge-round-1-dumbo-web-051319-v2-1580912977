@@ -10,7 +10,8 @@ class App extends Component {
 
 
   state = {
-    books: []
+    books: [],
+    bookShelf: []
   }
 
   componentDidMount() {
@@ -20,12 +21,36 @@ class App extends Component {
     }))
   }
 
+  moveToBookShelf = (id) => {
+    let book = this.state.books.filter(book => book.id === id)
+    // console.log(book)
+    this.setState({ 
+      bookShelf: [...this.state.bookShelf, book[0]]
+    })
+  }
+
+  removeFromBookShelf = (id) => {
+    let newBookShelf = this.state.bookShelf.filter(book => book.id !== id)
+    // console.log(newBookShelf)
+    this.setState({
+      bookShelf: newBookShelf
+    })
+  }
+
+  addBook = (book) => {
+    // console.log("before", this.state.books)
+    this.setState({
+      books: [...this.state.books, book]
+    })
+  }
+
 
   render() {
+    // console.log(this.state.bookShelf)
     return (
       <div className="book-container">
-        <BookList books={this.state.books} />
-        <Bookshelf />
+        <BookList books={this.state.books} moveToBookShelf={this.moveToBookShelf} addBook={this.addBook}/>
+        <Bookshelf bookShelf={this.state.bookShelf} removeFromBookShelf={this.removeFromBookShelf}/>
       </div>
     );
   }
