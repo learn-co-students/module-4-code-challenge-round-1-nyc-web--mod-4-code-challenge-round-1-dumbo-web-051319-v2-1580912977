@@ -24,9 +24,11 @@ class App extends Component {
   }
 
   addBookToShelf = (book) => {
-    this.setState(prevState => ({
-      bookshelf: [...prevState.bookshelf, book]
-    }))
+    if (!this.state.bookshelf.includes(book)) {
+      this.setState(prevState => ({
+        bookshelf: [...prevState.bookshelf, book]
+      }))
+    }
   }
 
   removeBook = (book) => {
@@ -47,12 +49,23 @@ class App extends Component {
 
   submitHandler = (e, book) => {
     e.preventDefault()
-    this.setState(prevState => ({
-      books: [book, ...prevState.books],
-      title: '',
-      author: '',
-      img: ''
-    }))
+    fetch('http://localhost:3005/books', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        accepts: 'application/json'
+      },
+      body: JSON.stringify(book)
+    })
+    .then(response => response.json())
+    .then(b => {
+      this.setState(prevState => ({
+        books: [...prevState.books, b],
+        title: '',
+        author: '',
+        img: ''
+      }))
+    })
   }
 
   render() {

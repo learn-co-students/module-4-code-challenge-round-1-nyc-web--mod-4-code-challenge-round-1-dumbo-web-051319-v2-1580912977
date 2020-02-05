@@ -47,6 +47,12 @@
       "title": "We Should All Be Feminists",
       "author": "Chimamanda Ngozi Adichie",
       "img": "https://images-na.ssl-images-amazon.com/images/I/51L9u20bC7L._SX348_BO1,204,203,200_.jpg"
+    },
+    {
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "img": "https://images.gr-assets.com/books/1442726934l/4865.jpg",
+      "id": 9
     }
   ]
 }

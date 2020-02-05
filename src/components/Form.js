@@ -8,7 +8,7 @@ class Form extends React.Component {
       title: this.props.title,
       author: this.props.author,
       img: this.props.img,
-      id: this.props.title
+      // id: this.props.title
     }
     return (
     <form onSubmit={(e) => this.props.submitHandler(e, book)}>
