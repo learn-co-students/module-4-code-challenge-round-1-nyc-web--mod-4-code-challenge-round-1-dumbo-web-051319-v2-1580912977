@@ -4,7 +4,7 @@ const Book = props => {
   return (
     <div onClick={() => props.action(props.id)}>
       <h2>{props.title}</h2>
-      <img alt="book image" src={props.img} />
+      <img alt={props.title} src={props.img} />
     </div>
   );
 };

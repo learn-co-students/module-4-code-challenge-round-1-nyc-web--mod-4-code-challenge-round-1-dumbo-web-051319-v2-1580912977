@@ -28,18 +28,17 @@ class Form extends React.Component {
     return (
       <div>
         <form>
-          <label>Title:
-            <input onChange={this.changehandler} value={this.state.title} type="text" name="title" />
-          </label>
-          <label>Author:
-            <input onChange={this.changehandler} value={this.state.author} type="text" name="author" />
-          </label>
-          <label>Image URL:
-            <input onChange={this.changehandler} value={this.state.img} type="text" name="img" />
-          </label>
-          <input onClick={this.submitHandler} type="submit" value="Add to List" />
+          <div className="form-group">
+            <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.title} type="text" name="title" placeholder="Title" />
+            <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.author} type="text" name="author" placeholder="Author" />
+            <input className="form-control form-control-sm" onChange={this.changehandler} value={this.state.img} type="text" name="img" placeholder="Image URL" />
+          
+       </div>
+            <button className="btn btn-sm btn-outline-success" onClick={this.submitHandler} type="submit" >Add to List</button>
         </form>
-      </div>)
+        <hr />
+      </div>
+    )
   }
 }
 

@@ -37,6 +37,7 @@ img {
 }
 .book-container {
   display: flex;
+  margin: 5px;  
 }
 .book-list {
   width: 50%;

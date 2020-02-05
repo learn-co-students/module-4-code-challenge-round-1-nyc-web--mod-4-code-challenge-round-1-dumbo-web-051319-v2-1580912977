@@ -64,14 +64,16 @@ class App extends Component {
 
   render() {    
     return (
-      <div className="book-container">
-        <BookList 
-          list={this.state.list}
-          addToShelf={this.addToShelf}
-          createBook={this.createBook} />
-        <Bookshelf
-          shelf={this.state.shelf}
-          removeFromShelf={this.removeFromShelf} />
+      <div>
+        <div className="book-container">
+          <BookList 
+            list={this.state.list}
+            addToShelf={this.addToShelf}
+            createBook={this.createBook} />
+          <Bookshelf
+            shelf={this.state.shelf}
+            removeFromShelf={this.removeFromShelf} />
+        </div>
       </div>
     );
   }
