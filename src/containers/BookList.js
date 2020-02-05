@@ -3,12 +3,14 @@ import Book from "../components/Book";
 import Form from "../components/Form";
 
 class BookList extends Component {
+  
+
   render() {
     return (
       <div className="book-list">
         <h1>Book List</h1>
-        <Form />
-        <ul>{/*render list of books here*/}</ul>
+        <Form bookPostSubmit={this.props.bookPostSubmit} title={this.props.title} author={this.props.author} img={this.props.img} bookFormHandle={this.props.bookFormHandle}/>
+        <ul>{this.props.bookList.map(book => <Book key={book.id} book={book} bookShelfAdd={this.props.bookShelfAdd}/>)}</ul>
       </div>
     );
   }
