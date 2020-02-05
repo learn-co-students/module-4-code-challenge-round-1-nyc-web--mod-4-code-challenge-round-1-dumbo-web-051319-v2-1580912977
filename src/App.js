@@ -22,11 +22,13 @@ class App extends Component {
   }
 
   moveToBookShelf = (id) => {
-    let book = this.state.books.filter(book => book.id === id)
     // console.log(book)
-    this.setState({ 
-      bookShelf: [...this.state.bookShelf, book[0]]
-    })
+    if (this.state.bookShelf.some(book => book.id === id)) {
+      alert("Book is already on the shelf.")
+    } else {let book = this.state.books.filter(book => book.id === id)
+      this.setState({ 
+        bookShelf: [...this.state.bookShelf, book[0]]
+      }) }
   }
 
   removeFromBookShelf = (id) => {
